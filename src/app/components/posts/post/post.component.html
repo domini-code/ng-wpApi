@@ -1,0 +1,10 @@
+<mat-card-header>
+  <mat-card-title>
+    <a [href]="post.link" target="_blank">
+      {{post.title.rendered}}
+    </a>
+  </mat-card-title>
+</mat-card-header>
+<mat-card-subtitle>{{post.date_gmt | date}}</mat-card-subtitle>
+<img matCardImage [src]="post['_embedded']['wp:featuredmedia'][0]['media_details'].sizes['medium'].source_url">
+<mat-card-content [innerHTML]="post.excerpt.rendered"></mat-card-content>

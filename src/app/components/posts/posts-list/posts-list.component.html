@@ -1,0 +1,7 @@
+<div fxFlex fxLayout="column">
+  <div fxLayout="row wrap">
+    <div style="padding:5px;" fxFlex="25" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" *ngFor="let post of posts$ | async">
+      <app-post [post]="post"></app-post>
+    </div>
+  </div>
+</div>
